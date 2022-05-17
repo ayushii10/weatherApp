@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>Weather Forecast</title>
+  </head>
+<body>
+
+  <h1 class="text-center-9">WeatherAPP</h1>
+
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+     
+
+      <mat-card>
+        <img mat-card-image  src="https://www.geoguessr.com/seterra/images/system/Barcelona.jpg"  alt="New York" type="button" (click)="sendToA(weatherSearchForm.value)"/> 
+    
+
+          <mat-card-content>
+            <p>Barcelona</p>
+          </mat-card-content>
+        </mat-card>
+        &nbsp;
+        <mat-card>
+          <img mat-card-image  src="https://i.dailymail.co.uk/i/newpix/2018/03/07/13/49F7CF7D00000578-5472813-image-a-31_1520430124202.jpg"  alt="New York" type="button" (click)="sendToAPIXU(weatherSearchForm.value)"/> 
+      
+          
+            <mat-card-content>
+              <p>New York</p>
+            </mat-card-content>
+          </mat-card>
+        &nbsp;
+       <mat-card>
+       
+        <img mat-card-image  src="https://www.geoguessr.com/seterra/images/system/milan.jpg" alt="New York" type="button" (click)="sendToa(weatherSearchForm.value)"/> 
+       
+        <mat-card-content>
+        <p>Milan</p>
+      </mat-card-content>
+    </mat-card>
+        &nbsp;
+      
+
+      <mat-card><img mat-card-image src="https://www.geoguessr.com/seterra/images/system/London.jpg"  alt="New York" type="button" (click)="sendToaa(weatherSearchForm.value)"/> 
+       
+      
+          <mat-card-content>
+            <p>London</p>
+          </mat-card-content>
+      
+      </mat-card>
+        &nbsp;
+      <mat-card> <img mat-card-image src="https://www.geoguessr.com/seterra/images/system/Paris.jpg"  alt="New York" type="button" (click)="sendToAA(weatherSearchForm.value)"/> 
+      
+        <mat-card-content>
+          <p>Paris</p>
+        </mat-card-content>
+      
+     </mat-card>
+     
+     </div>
+     </div>
+     </div>
+     <br>
+     <br>
+      <form
+        [formGroup]="weatherSearchForm">
+    
+   <div class="container">
+
+  
+   <div class="col-md">
+     
+        <h3 class="text-center-8">Weather Details:</h3>
+        <p class="text-center">
+          Current Humidity:
+          {{ this.weatherData?.current.humidity}}
+        </p> 
+    
+        <p class="text-center">
+          Feels like in Degrees Celsius:
+          {{ this.weatherData?.current.feelslike }} 
+        </p>
+        <p class="text-center">
+            Current Pressure:
+            {{ this.weatherData?.current.pressure}} 
+          </p>
+          <p class="text-center">
+            Is day ?:
+            {{ this.weatherData?.current.is_day }}
+          </p>
+
+          
+          <p class="text-center">
+            Cloud Cover:
+            {{ this.weatherData?.current.cloudcover}}
+          </p>
+          
+        <p class="text-center">
+          Wind Speed:
+          {{ this.weatherData?.current.wind_speed }} kmph
+        </p> 
+        <p class="text-center">
+          Location Searched: {{ this.weatherData?.location.name }},
+           {{ this.weatherData?.location.country }}
+        </p>
+
+      
+
+        </div>
+        </div>
+        
+      </form>
+
+    </body>
+
+</html>
+
+
+
+
+
+
