@@ -31,14 +31,11 @@ export class WeatherComponent implements OnInit {
    
   }
 
-  go(formValues:{location:any;}){
+  go(){
 
 
-   this.apixuService.getWeather({ location: formValues.location }).subscribe(data => {
-     this.weatherData = data;
-     console.log(this.weatherData);
     this._route.navigate(['/sss'])
-  });}
+  }
   
   sendToAPIXU(formValues: { location: any; }) {
     this.apixuService.getWeather({ location: formValues.location }).subscribe(data => {
